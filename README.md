@@ -7,7 +7,8 @@
 Para iniciar o servidor, através do terminal de comandos acesse o diretório raiz deste projeto e execute:
 
 ```sh
-$ go run server/main.go
+$ cd server
+$ go run server.go
 ```
 
 Se tudo correr bem, você verá a mensagem "Server listening on port 8080".
@@ -33,6 +34,7 @@ onde `{valor}` é o valor da cotação atual.
 Para consultar o banco de dados, através do terminal de comandos acesse o diretório raiz deste projeto e execute (requer o SQLite 3 instalado):
 
 ```sh
+$ cd server
 $ sqlite3 db.sqlite3
 ```
 
@@ -47,7 +49,8 @@ select * from quotation;
 Para executar o cliente, através do terminal de comandos acesse o diretório raiz deste projeto e execute:
 
 ```sh
-$ go run client/main.go
+$ cd client
+$ go run client.go
 ```
 
-Se tudo correr bem, um arquivo denominado `cotacao.txt` será criado na raiz do projeto. Esse arquivo contém a cotação do Dólar que foi informada pelo servidor.
+Se tudo correr bem, um arquivo denominado `cotacao.txt` será criado na pasta `client`, relativa à raiz do projeto. Esse arquivo contém a cotação do Dólar que foi informada pelo servidor.

@@ -45,7 +45,7 @@ func setup() {
 }
 
 func setupDatabase() {
-	_, err := os.Stat("db.sqlite3")
+	_, err := os.Create("db.sqlite3")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
